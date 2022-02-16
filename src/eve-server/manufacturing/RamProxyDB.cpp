@@ -59,7 +59,7 @@ PyRep *RamProxyDB::GetJobs2(const uint32 ownerID, const bool completed, const ui
         " FROM ramJobs AS job"
         " LEFT JOIN entity AS installedItem ON job.installedItemID = installedItem.itemID"
         " LEFT JOIN ramAssemblyLines AS assemblyLine ON job.assemblyLineID = assemblyLine.assemblyLineID"
-        " LEFT JOIN invBlueprints AS blueprint ON installedItem.itemID = blueprint.blueprintID"
+        " LEFT JOIN invBlueprints AS blueprint ON installedItem.itemID = blueprint.itemID"
         " LEFT JOIN invBlueprintTypes AS blueprintType ON installedItem.typeID = blueprintType.blueprintTypeID"
         " LEFT JOIN ramAssemblyLineStations AS station ON assemblyLine.containerID = station.stationID"
         " WHERE job.ownerID = %u"
